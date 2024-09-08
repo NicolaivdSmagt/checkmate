@@ -14,7 +14,7 @@ On macOS with Homebrew:
 
 ```
 export OPENAI_KEY=<your-openai-API-key>
-./checkmate.py
+./checkmate-openai.py
 ```
 or
 
