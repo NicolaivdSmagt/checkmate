@@ -37,7 +37,7 @@ pgn = """[Event "FIDE World Championship Match 2024"]
 
 1."""
 
-def get_claude_move(pgn, color):
+def get_move(pgn, color):
     #model_id = "mistral.mistral-7b-instruct-v0:2"
     model_id = "mistral.mixtral-8x7b-instruct-v0:1"
     
@@ -77,7 +77,7 @@ def main():
     move_count = 0
     
     while True:
-        san_move = get_claude_move(pgn, 'White' if board.turn else 'Black')
+        san_move = get_move(pgn, 'White' if board.turn else 'Black')
         if san_move is None:
             print("Failed to get a move from LLM. Ending the game.")
             break
